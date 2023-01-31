@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 import { useRouter } from "next/router";
 import Head from "next/head";
-
+import NewsletterRegistration from "../../components/input/newsletter-registration";
 import { getAllEvents } from "../../helpers/api-util";
 import EventList from "../../components/events/event-list";
 import EventsSearch from "../../components/events/events-search";
@@ -29,6 +29,7 @@ function AllEventsPage(props: { events: any }) {
         />
       </Head>
       <EventsSearch onSearch={findEventsHandler} />
+      <NewsletterRegistration />
       <EventList items={events} />
     </Fragment>
   );
